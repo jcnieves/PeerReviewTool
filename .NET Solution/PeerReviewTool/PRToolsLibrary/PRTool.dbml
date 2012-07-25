@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PRTool" Class="PRToolDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=CATWEBMX;Initial Catalog=PRTool;Integrated Security=True" SettingsObjectName="PRToolsLibrary.Properties.Settings" SettingsPropertyName="PRToolConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Project" Member="Projects">
+    <Type Name="Project">
+      <Column Name="IDProject" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProjectName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UpdateTimeStamp" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ActiveFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Project_Release" Member="Releases" ThisKey="IDProject" OtherKey="IDProject" Type="Release" />
+      <Association Name="Project_UserProjectRef" Member="UserProjectRefs" ThisKey="IDProject" OtherKey="IDProject" Type="UserProjectRef" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Release" Member="Releases">
+    <Type Name="Release">
+      <Column Name="IDRelease" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDProject" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VersionR" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ActiveFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Release_ReleasePhaseRef" Member="ReleasePhaseRefs" ThisKey="IDRelease" OtherKey="IDRelease" Type="ReleasePhaseRef" />
+      <Association Name="Release_WorkItem" Member="WorkItems" ThisKey="IDRelease" OtherKey="IDRelease" Type="WorkItem" />
+      <Association Name="Project_Release" Member="Project" ThisKey="IDProject" OtherKey="IDProject" Type="Project" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReleasePhaseRef" Member="ReleasePhaseRefs">
+    <Type Name="ReleasePhaseRef">
+      <Column Name="IDRelease" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDPhase" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ActiveFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Release_ReleasePhaseRef" Member="Release" ThisKey="IDRelease" OtherKey="IDRelease" Type="Release" IsForeignKey="true" />
+      <Association Name="Phase_ReleasePhaseRef" Member="Phase" ThisKey="IDPhase" OtherKey="IDPhase" Type="Phase" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Review" Member="Reviews">
+    <Type Name="Review">
+      <Column Name="IDreview" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDWorkItem" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDReviewType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDRelease" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDPhase" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateReview" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReviewType" Member="ReviewTypes">
+    <Type Name="ReviewType">
+      <Column Name="IDReviewType" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DescriptionRt" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ActiveFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserProjectRef" Member="UserProjectRefs">
+    <Type Name="UserProjectRef">
+      <Column Name="IDUser" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDProject" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDUserType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ActiveFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Project_UserProjectRef" Member="Project" ThisKey="IDProject" OtherKey="IDProject" Type="Project" IsForeignKey="true" />
+      <Association Name="Usert_UserProjectRef" Member="Usert" ThisKey="IDUser" OtherKey="IDUser" Type="Usert" IsForeignKey="true" />
+      <Association Name="UserType_UserProjectRef" Member="UserType" ThisKey="IDUserType" OtherKey="IDUserType" Type="UserType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Usert" Member="Userts">
+    <Type Name="Usert">
+      <Column Name="IDUser" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="SuperUserFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ActiveFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UserEmail" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Association Name="Usert_UserProjectRef" Member="UserProjectRefs" ThisKey="IDUser" OtherKey="IDUser" Type="UserProjectRef" />
+      <Association Name="Usert_WorkItem" Member="WorkItems" ThisKey="IDUser" OtherKey="IDUserAuthor" Type="WorkItem" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserType" Member="UserTypes">
+    <Type Name="UserType">
+      <Column Name="IDUserType" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DescriptionUt" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="ActiveFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="UserType_UserProjectRef" Member="UserProjectRefs" ThisKey="IDUserType" OtherKey="IDUserType" Type="UserProjectRef" />
+      <Association Name="UserType_UserTypePrivilegeRef" Member="UserTypePrivilegeRefs" ThisKey="IDUserType" OtherKey="IDUserType" Type="UserTypePrivilegeRef" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserTypePrivilegeRef" Member="UserTypePrivilegeRefs">
+    <Type Name="UserTypePrivilegeRef">
+      <Column Name="IDUserType" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDPrivilege" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="UserType_UserTypePrivilegeRef" Member="UserType" ThisKey="IDUserType" OtherKey="IDUserType" Type="UserType" IsForeignKey="true" />
+      <Association Name="Privilege_UserTypePrivilegeRef" Member="Privilege" ThisKey="IDPrivilege" OtherKey="IDPrivilege" Type="Privilege" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WorkItem" Member="WorkItems">
+    <Type Name="WorkItem">
+      <Column Name="IDWorkItem" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDRelease" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDPhase" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDUserAuthor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="WorkItemName" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="ActiveFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Release_WorkItem" Member="Release" ThisKey="IDRelease" OtherKey="IDRelease" Type="Release" IsForeignKey="true" />
+      <Association Name="Usert_WorkItem" Member="Usert" ThisKey="IDUserAuthor" OtherKey="IDUser" Type="Usert" IsForeignKey="true" />
+      <Association Name="Phase_WorkItem" Member="Phase" ThisKey="IDPhase" OtherKey="IDPhase" Type="Phase" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Phase" Member="Phases">
+    <Type Name="Phase">
+      <Column Name="IDPhase" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PhaseName" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ActiveFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Phase_ReleasePhaseRef" Member="ReleasePhaseRefs" ThisKey="IDPhase" OtherKey="IDPhase" Type="ReleasePhaseRef" />
+      <Association Name="Phase_WorkItem" Member="WorkItems" ThisKey="IDPhase" OtherKey="IDPhase" Type="WorkItem" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Privilege" Member="Privileges">
+    <Type Name="Privilege">
+      <Column Name="IDPrivilege" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DescriptionP" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="ActiveFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Privilege_UserTypePrivilegeRef" Member="UserTypePrivilegeRefs" ThisKey="IDPrivilege" OtherKey="IDPrivilege" Type="UserTypePrivilegeRef" />
+    </Type>
+  </Table>
+</Database>

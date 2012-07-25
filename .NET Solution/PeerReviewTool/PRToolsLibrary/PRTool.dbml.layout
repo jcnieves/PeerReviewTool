@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 13.75" name="PRTool">
+  <DataContextMoniker Name="/PRToolDataContext" />
+  <nestedChildShapes>
+    <classShape Id="b6591e8d-da46-4572-ac4a-b689db0332d1" absoluteBounds="0.75, 5.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/PRToolDataContext/Project" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bd088331-987c-4579-8609-6da9eba91a23" absoluteBounds="0.765, 6.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="31d6d853-d56d-4b7d-b11b-88062c49b1c2" absoluteBounds="3.5, 5.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/PRToolDataContext/Release" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7202a92e-ce56-4e99-999c-0c577219e8f8" absoluteBounds="3.515, 6.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="12c09c44-c221-447f-a584-490e3bc93dd0" absoluteBounds="6.25, 5.875, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/PRToolDataContext/ReleasePhaseRef" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f1fe080e-d84c-4027-bbc1-798ebbde2ef1" absoluteBounds="6.265, 6.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2ec72ee2-4199-4ed4-b571-4964d505df6e" absoluteBounds="6.75, 8.875, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/PRToolDataContext/Review" />
+      <nestedChildShapes>
+        <elementListCompartment Id="05721ebc-9bc1-4f59-be2f-024c46293fa8" absoluteBounds="6.765, 9.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="697b16e3-e83b-497d-90e3-49a1d0e8acc8" absoluteBounds="8.75, 2.875, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/PRToolDataContext/ReviewType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="14e8c8d5-f07e-4ad3-9525-3bab41d16e20" absoluteBounds="8.765, 3.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3e5f43a0-03d2-4159-b738-47b3e24a2d07" absoluteBounds="3.5, 2.75, 2, 1.578595377604167">
+      <DataClassMoniker Name="/PRToolDataContext/UserProjectRef" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b9ec20e3-0008-489c-8e84-d488ff9bce9a" absoluteBounds="3.515, 3.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b024e0b4-3ac8-40c0-8e93-e3a8b05e8261" absoluteBounds="0.75, 8.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/PRToolDataContext/Usert" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d4ff38e4-a112-4f3d-87dc-6d87df354c5f" absoluteBounds="0.765, 9.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f892df32-aa49-4d91-9c91-0e2294995b1d" absoluteBounds="0.75, 2.625, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/PRToolDataContext/UserType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3584f3e6-d80c-4be6-8ff4-d5261f2ff12c" absoluteBounds="0.765, 3.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f2d4d28f-dde8-4057-840d-ed79fa296864" absoluteBounds="3.5, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/PRToolDataContext/UserTypePrivilegeRef" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d9a97556-78f7-42a4-8107-5e5c8f8ed375" absoluteBounds="3.515, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1950771e-521a-4a05-bb5a-5cd22a6edcda" absoluteBounds="6.25, 2.5, 2, 1.9631982421874996">
+      <DataClassMoniker Name="/PRToolDataContext/WorkItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dd949569-1b92-41e9-9b8a-7a271b0b21e4" absoluteBounds="6.265, 2.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f272e3c0-82a6-4e3d-93f4-348755079cb6" absoluteBounds="3.5, 8.625, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/PRToolDataContext/Phase" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5838a3db-5d3c-4ce7-95fa-eebeb7cfb23b" absoluteBounds="3.515, 9.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5261d66d-db81-4eff-a2c0-f5c83c5e46d6" absoluteBounds="0.75, 12.125, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/PRToolDataContext/Privilege" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6fa3ccad-23a4-43d4-94f1-128d59c68b8a" absoluteBounds="0.765, 12.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 6.53929768880208); (3.13541666666667 : 6.53929768880208 : JumpStart); (3.48958333333333 : 6.53929768880208 : JumpEnd); (3.5 : 6.53929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PRToolDataContext/Project/Project_Release" />
+      <nodes>
+        <classShapeMoniker Id="b6591e8d-da46-4572-ac4a-b689db0332d1" />
+        <classShapeMoniker Id="31d6d853-d56d-4b7d-b11b-88062c49b1c2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 6.56814697265625); (5.97916666666667 : 6.56814697265625 : JumpStart); (6.14583333333333 : 6.56814697265625 : JumpEnd); (6.25 : 6.56814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PRToolDataContext/Release/Release_ReleasePhaseRef" />
+      <nodes>
+        <classShapeMoniker Id="31d6d853-d56d-4b7d-b11b-88062c49b1c2" />
+        <classShapeMoniker Id="12c09c44-c221-447f-a584-490e3bc93dd0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 5.75121330413662); (3.125 : 5.37621330413662); (3.125 : 3.53929768880208); (3.32291666666667 : 3.53929768880208 : JumpStart); (3.48958333333333 : 3.53929768880208 : JumpEnd); (3.5 : 3.53929768880208)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PRToolDataContext/Project/Project_UserProjectRef" />
+      <nodes>
+        <classShapeMoniker Id="b6591e8d-da46-4572-ac4a-b689db0332d1" />
+        <classShapeMoniker Id="3e5f43a0-03d2-4159-b738-47b3e24a2d07" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.72139320537861 : 8.75); (3.15982443490112 : 8.31156877047748 : JumpStart); (3.27767556509888 : 8.19371764027973 : JumpEnd); (3.3125 : 8.15889320537861); (3.3125 : 3.96519853320312); (3.32291666666667 : 3.96519853320312 : JumpStart); (3.48958333333333 : 3.96519853320312 : JumpEnd); (3.5 : 3.96519853320312)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PRToolDataContext/Usert/Usert_UserProjectRef" />
+      <nodes>
+        <classShapeMoniker Id="b024e0b4-3ac8-40c0-8e93-e3a8b05e8261" />
+        <classShapeMoniker Id="3e5f43a0-03d2-4159-b738-47b3e24a2d07" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.08214884440104); (3.32291666666667 : 3.08214884440104 : JumpStart); (3.48958333333333 : 3.08214884440104 : JumpEnd); (3.5 : 3.08214884440104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PRToolDataContext/UserType/UserType_UserProjectRef" />
+      <nodes>
+        <classShapeMoniker Id="f892df32-aa49-4d91-9c91-0e2294995b1d" />
+        <classShapeMoniker Id="3e5f43a0-03d2-4159-b738-47b3e24a2d07" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 2.625); (1.75 : 1.34699625651042); (3.5 : 1.34699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PRToolDataContext/UserType/UserType_UserTypePrivilegeRef" />
+      <nodes>
+        <classShapeMoniker Id="f892df32-aa49-4d91-9c91-0e2294995b1d" />
+        <classShapeMoniker Id="f2d4d28f-dde8-4057-840d-ed79fa296864" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 5.75); (5.875 : 5.375); (5.875 : 3.48159912109375); (5.97916666666667 : 3.48159912109375 : JumpStart); (6.14583333333333 : 3.48159912109375 : JumpEnd); (6.25 : 3.48159912109375)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PRToolDataContext/Release/Release_WorkItem" />
+      <nodes>
+        <classShapeMoniker Id="31d6d853-d56d-4b7d-b11b-88062c49b1c2" />
+        <classShapeMoniker Id="1950771e-521a-4a05-bb5a-5cd22a6edcda" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 8.8112992741887); (3.21875 : 8.3425492741887); (3.21875 : 4.8381982421875); (3.22916666666667 : 4.8381982421875 : JumpStart); (3.48958333333333 : 4.8381982421875 : JumpEnd); (5.875 : 4.8381982421875); (6.00357443490112 : 4.70962380728638 : JumpStart); (6.12142556509888 : 4.59177267708862 : JumpEnd); (6.25 : 4.4631982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PRToolDataContext/Usert/Usert_WorkItem" />
+      <nodes>
+        <classShapeMoniker Id="b024e0b4-3ac8-40c0-8e93-e3a8b05e8261" />
+        <classShapeMoniker Id="1950771e-521a-4a05-bb5a-5cd22a6edcda" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 8.71875); (6.46875 : 8.71875); (6.46875 : 7.2612939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PRToolDataContext/Phase/Phase_ReleasePhaseRef" />
+      <nodes>
+        <classShapeMoniker Id="f272e3c0-82a6-4e3d-93f4-348755079cb6" />
+        <classShapeMoniker Id="12c09c44-c221-447f-a584-490e3bc93dd0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 8.6868490375601); (6.0625 : 8.1243490375601); (6.0625 : 2.95954756054688); (6.25 : 2.95954756054688)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PRToolDataContext/Phase/Phase_WorkItem" />
+      <nodes>
+        <classShapeMoniker Id="f272e3c0-82a6-4e3d-93f4-348755079cb6" />
+        <classShapeMoniker Id="1950771e-521a-4a05-bb5a-5cd22a6edcda" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 12.15592401878); (3.40625 : 11.49967401878); (3.40625 : 1.67674638476563); (3.5 : 1.67674638476563)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PRToolDataContext/Privilege/Privilege_UserTypePrivilegeRef" />
+      <nodes>
+        <classShapeMoniker Id="5261d66d-db81-4eff-a2c0-f5c83c5e46d6" />
+        <classShapeMoniker Id="f2d4d28f-dde8-4057-840d-ed79fa296864" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
